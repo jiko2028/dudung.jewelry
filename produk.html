@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Koleksi Produk Perhiasan Dudung Jewelry - Cincin, Kalung, Gelang, dan Anting Berkualitas Premium">
+    <title>Produk - Dudung Jewelry</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 2rem;
+            background: transparent;
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-family: var(--font-secondary);
+            font-weight: 600;
+            transition: var(--transition-normal);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-gold);
+            color: var(--primary-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💎</span>
+                Dudung Jewelry
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                <li><a href="produk.html" class="nav-link">Produk</a></li>
+                <li><a href="testimoni.html" class="nav-link">Testimoni</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="pemesanan.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Pesan Sekarang</a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content" style="grid-template-columns: 1fr;">
+            <div class="hero-text" style="text-align: center;">
+                <h1>Koleksi <span class="highlight">Perhiasan Kami</span></h1>
+                <p>Temukan perhiasan sempurna untuk setiap momen spesial Anda</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Semua Produk</h2>
+                <p class="section-subtitle">Filter berdasarkan kategori untuk menemukan yang Anda cari</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Semua Produk</button>
+                <button class="filter-btn" data-filter="cincin">Cincin</button>
+                <button class="filter-btn" data-filter="kalung">Kalung</button>
+                <button class="filter-btn" data-filter="gelang">Gelang</button>
+                <button class="filter-btn" data-filter="anting">Anting</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <!-- Cincin -->
+                <div class="product-card" data-category="cincin">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop"
+                            alt="Cincin Berlian Klasik">
+                        <span class="product-badge">Terlaris</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Cincin</p>
+                        <h3 class="product-name">Cincin Berlian Klasik</h3>
+                        <p class="product-description">Cincin berlian dengan desain klasik yang timeless</p>
+                        <p class="product-price">Rp 3.500.000</p>
+                        <a href="pemesanan.html?product=Cincin Berlian Klasik" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cincin">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400&h=400&fit=crop"
+                            alt="Cincin Tunangan Emas">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Cincin</p>
+                        <h3 class="product-name">Cincin Tunangan Emas</h3>
+                        <p class="product-description">Cincin tunangan emas 18k dengan berlian solitaire</p>
+                        <p class="product-price">Rp 5.000.000</p>
+                        <a href="pemesanan.html?product=Cincin Tunangan Emas" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cincin">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop"
+                            alt="Cincin Couple">
+                        <span class="product-badge">Baru</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Cincin</p>
+                        <h3 class="product-name">Cincin Couple Minimalis</h3>
+                        <p class="product-description">Set cincin couple dengan desain minimalis modern</p>
+                        <p class="product-price">Rp 2.500.000</p>
+                        <a href="pemesanan.html?product=Cincin Couple Minimalis" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Kalung -->
+                <div class="product-card" data-category="kalung">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop"
+                            alt="Kalung Emas Liontin">
+                        <span class="product-badge">Baru</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Kalung</p>
+                        <h3 class="product-name">Kalung Emas Liontin</h3>
+                        <p class="product-description">Kalung emas 18k dengan liontin elegan</p>
+                        <p class="product-price">Rp 2.800.000</p>
+                        <a href="pemesanan.html?product=Kalung Emas Liontin" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kalung">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400&h=400&fit=crop"
+                            alt="Kalung Berlian">
+                        <span class="product-badge">Premium</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Kalung</p>
+                        <h3 class="product-name">Kalung Berlian Mewah</h3>
+                        <p class="product-description">Kalung berlian dengan desain mewah dan eksklusif</p>
+                        <p class="product-price">Rp 8.500.000</p>
+                        <a href="pemesanan.html?product=Kalung Berlian Mewah" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kalung">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop"
+                            alt="Kalung Mutiara">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Kalung</p>
+                        <h3 class="product-name">Kalung Mutiara Elegan</h3>
+                        <p class="product-description">Kalung mutiara asli dengan kualitas premium</p>
+                        <p class="product-price">Rp 3.200.000</p>
+                        <a href="pemesanan.html?product=Kalung Mutiara Elegan" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Gelang -->
+                <div class="product-card" data-category="gelang">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop"
+                            alt="Gelang Emas Minimalis">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Gelang</p>
+                        <h3 class="product-name">Gelang Emas Minimalis</h3>
+                        <p class="product-description">Gelang emas dengan desain minimalis modern</p>
+                        <p class="product-price">Rp 1.500.000</p>
+                        <a href="pemesanan.html?product=Gelang Emas Minimalis" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gelang">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=400&fit=crop"
+                            alt="Gelang Berlian">
+                        <span class="product-badge">Terlaris</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Gelang</p>
+                        <h3 class="product-name">Gelang Berlian Cantik</h3>
+                        <p class="product-description">Gelang berlian dengan detail yang memukau</p>
+                        <p class="product-price">Rp 4.200.000</p>
+                        <a href="pemesanan.html?product=Gelang Berlian Cantik" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="gelang">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400&h=400&fit=crop"
+                            alt="Gelang Bangle">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Gelang</p>
+                        <h3 class="product-name">Gelang Bangle Emas</h3>
+                        <p class="product-description">Gelang bangle emas dengan ukiran tradisional</p>
+                        <p class="product-price">Rp 2.100.000</p>
+                        <a href="pemesanan.html?product=Gelang Bangle Emas" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <!-- Anting -->
+                <div class="product-card" data-category="anting">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1535556116002-6281ff3e9f42?w=400&h=400&fit=crop"
+                            alt="Anting Berlian">
+                        <span class="product-badge">Premium</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Anting</p>
+                        <h3 class="product-name">Anting Berlian Stud</h3>
+                        <p class="product-description">Anting berlian stud dengan kilau sempurna</p>
+                        <p class="product-price">Rp 3.800.000</p>
+                        <a href="pemesanan.html?product=Anting Berlian Stud" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="anting">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&h=400&fit=crop"
+                            alt="Anting Emas">
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Anting</p>
+                        <h3 class="product-name">Anting Emas Drop</h3>
+                        <p class="product-description">Anting emas dengan desain drop yang anggun</p>
+                        <p class="product-price">Rp 1.800.000</p>
+                        <a href="pemesanan.html?product=Anting Emas Drop" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="anting">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=400&h=400&fit=crop"
+                            alt="Anting Mutiara">
+                        <span class="product-badge">Baru</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Anting</p>
+                        <h3 class="product-name">Anting Mutiara Klasik</h3>
+                        <p class="product-description">Anting mutiara dengan desain klasik yang elegan</p>
+                        <p class="product-price">Rp 2.200.000</p>
+                        <a href="pemesanan.html?product=Anting Mutiara Klasik" class="btn btn-primary"
+                            style="width: 100%;">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-dark">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: var(--primary-light); margin-bottom: 1rem;">Tidak Menemukan yang Anda Cari?</h2>
+            <p
+                style="color: rgba(255,255,255,0.7); font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Hubungi kami untuk custom order atau konsultasi gratis dengan ahli perhiasan kami
+            </p>
+            <div class="hero-buttons" style="justify-content: center;">
+                <a href="kontak.html" class="btn btn-primary">Hubungi Kami</a>
+                <a href="pemesanan.html" class="btn btn-outline">Custom Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dudung Jewelry</h3>
+                <p>Perhiasan berkualitas tinggi dengan desain elegan untuk momen spesial Anda.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="produk.html">Produk</a>
+                <a href="testimoni.html">Testimoni</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Layanan</h3>
+                <a href="pemesanan.html">Cara Pemesanan</a>
+                <a href="kontak.html">Hubungi Kami</a>
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Syarat & Ketentuan</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>📞 +62 812-3456-7890</p>
+                <p>📧 info@dudungjewelry.com</p>
+                <p>📍 Jl. Selotomo 261, Condong Catur</p>
+                <p>🕐 Senin - Sabtu: 09.00 - 18.00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dudung Jewelry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button">💬</button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3>Chat dengan Kami</h3>
+                <button class="chat-close">×</button>
+            </div>
+            <div class="chat-messages"></div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" placeholder="Ketik pesan...">
+                <button class="chat-send">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

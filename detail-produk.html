@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detail Produk - Dudung Jewelry">
+    <title>Detail Produk - Dudung Jewelry</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .product-detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .product-detail-image {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-detail-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+
+        .product-detail-info h1 {
+            margin-bottom: 1rem;
+        }
+
+        .product-detail-category {
+            color: var(--primary-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-detail-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin: 1.5rem 0;
+        }
+
+        .product-detail-description {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .product-features {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-bottom: 2rem;
+        }
+
+        .product-features h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .product-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .breadcrumb {
+            padding: 1rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--primary-gold);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 968px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-detail-image {
+                position: relative;
+                top: 0;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💎</span>
+                Dudung Jewelry
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+                <li><a href="produk.html" class="nav-link">Produk</a></li>
+                <li><a href="testimoni.html" class="nav-link">Testimoni</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                <li><a href="pemesanan.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">Pesan Sekarang</a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Gradient -->
+    <section
+        style="background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #1a1a1a 100%); padding: 6rem 2rem 3rem; position: relative; overflow: hidden;">
+        <!-- Decorative Elements -->
+        <div
+            style="position: absolute; top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%); border-radius: 50%;">
+        </div>
+        <div
+            style="position: absolute; bottom: -15%; left: -5%; width: 350px; height: 350px; background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%); border-radius: 50%;">
+        </div>
+
+        <div class="product-detail-container" style="position: relative; z-index: 1;">
+            <div class="breadcrumb" style="color: rgba(255,255,255,0.6); margin-bottom: 2rem;">
+                <a href="index.html" style="color: var(--primary-gold);">Beranda</a> /
+                <a href="produk.html" style="color: var(--primary-gold);">Produk</a> /
+                <span id="breadcrumb-product" style="color: rgba(255,255,255,0.8);">Detail Produk</span>
+            </div>
+
+            <!-- Hero Title -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <div
+                    style="display: inline-block; background: rgba(212, 175, 55, 0.1); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 1rem; border: 1px solid rgba(212, 175, 55, 0.3);">
+                    <span
+                        style="color: var(--primary-gold); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">✨
+                        Premium Collection</span>
+                </div>
+                <h1 id="hero-product-name"
+                    style="color: var(--primary-light); font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">Detail
+                    Produk</h1>
+                <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Perhiasan
+                    berkualitas tinggi dengan desain eksklusif dan craftsmanship terbaik</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="section section-light" style="margin-top: -2rem; position: relative; z-index: 2;">
+        <div class="product-detail-container">
+            <!-- Decorative Card Container -->
+            <div
+                style="background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 20px 60px rgba(0,0,0,0.1); position: relative;">
+                <!-- Decorative Corner -->
+                <div
+                    style="position: absolute; top: 0; right: 0; width: 150px; height: 150px; background: linear-gradient(135deg, transparent 50%, rgba(212, 175, 55, 0.05) 50%); border-radius: 0 20px 0 0;">
+                </div>
+                <div
+                    style="position: absolute; bottom: 0; left: 0; width: 150px; height: 150px; background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 50%, transparent 50%); border-radius: 0 0 0 20px;">
+                </div>
+
+                <div class="product-detail-grid">
+                    <div class="product-detail-image">
+                        <img id="product-image" src="" alt="Product Image">
+                    </div>
+
+                    <div class="product-detail-info">
+                        <p class="product-detail-category" id="product-category">Kategori</p>
+                        <h1 id="product-name">Nama Produk</h1>
+                        <div class="rating" style="font-size: 1.2rem; margin-bottom: 1rem;">
+                            ⭐⭐⭐⭐⭐ <span style="color: var(--text-light); font-size: 0.9rem;">(4.9/5 dari 127
+                                review)</span>
+                        </div>
+                        <p class="product-detail-price" id="product-price">Rp 0</p>
+
+                        <p class="product-detail-description" id="product-description">
+                            Deskripsi produk akan ditampilkan di sini.
+                        </p>
+
+                        <div class="product-features">
+                            <h3>Spesifikasi Produk</h3>
+                            <ul id="product-specs">
+                                <li><span class="feature-icon">✨</span> <span>Material: Emas 18K / Berlian</span></li>
+                                <li><span class="feature-icon">📏</span> <span>Ukuran: Dapat disesuaikan</span></li>
+                                <li><span class="feature-icon">🎁</span> <span>Packaging: Box eksklusif gratis</span>
+                                </li>
+                                <li><span class="feature-icon">📜</span> <span>Sertifikat: Sertifikat keaslian
+                                        resmi</span>
+                                </li>
+                                <li><span class="feature-icon">🛡️</span> <span>Garansi: Lifetime warranty</span></li>
+                                <li><span class="feature-icon">🚚</span> <span>Pengiriman: Gratis ongkir &
+                                        asuransi</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="product-actions">
+                            <a href="#" id="order-button" class="btn btn-primary"
+                                style="flex: 1; text-align: center; padding: 1.2rem;">
+                                Pesan Sekarang
+                            </a>
+                            <a href="kontak.html" class="btn btn-secondary"
+                                style="flex: 1; text-align: center; padding: 1.2rem;">
+                                Hubungi Kami
+                            </a>
+                        </div>
+
+                        <div
+                            style="margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, var(--primary-gold), var(--accent-rose)); border-radius: var(--radius-md);">
+                            <h4 style="color: var(--primary-dark); margin-bottom: 0.5rem;">🎉 Promo Spesial!</h4>
+                            <p style="color: var(--primary-dark); margin-bottom: 0;">Dapatkan diskon 10% untuk pembelian
+                                hari ini + gratis resize selamanya!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: var(--primary-light);">Produk Terkait</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.7);">Produk lain yang mungkin Anda sukai
+                </p>
+            </div>
+
+            <div class="product-grid" id="related-products">
+                <!-- Related products will be loaded here -->
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="produk.html" class="btn btn-outline">Lihat Semua Produk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Dudung Jewelry</h3>
+                <p>Perhiasan berkualitas tinggi dengan desain elegan untuk momen spesial Anda.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Menu</h3>
+                <a href="index.html">Beranda</a>
+                <a href="tentang.html">Tentang Kami</a>
+                <a href="produk.html">Produk</a>
+                <a href="testimoni.html">Testimoni</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Layanan</h3>
+                <a href="pemesanan.html">Cara Pemesanan</a>
+                <a href="kontak.html">Hubungi Kami</a>
+                <a href="#">Kebijakan Privasi</a>
+                <a href="#">Syarat & Ketentuan</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontak</h3>
+                <p>📞 +62 812-3456-7890</p>
+                <p>📧 info@dudungjewelry.com</p>
+                <p>📍 Jl. Selotomo 261, Condong Catur</p>
+                <p>🕐 Senin - Sabtu: 09.00 - 18.00</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Dudung Jewelry. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-button">💬</button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3>Chat dengan Kami</h3>
+                <button class="chat-close">×</button>
+            </div>
+            <div class="chat-messages"></div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" placeholder="Ketik pesan...">
+                <button class="chat-send">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Product data
+        const products = {
+            'cincin-berlian-klasik': {
+                name: 'Cincin Berlian Klasik',
+                category: 'Cincin',
+                price: 'Rp 3.500.000',
+                image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=600&fit=crop',
+                description: 'Cincin berlian dengan desain klasik yang timeless. Dibuat dari emas 18K dengan berlian berkualitas tinggi yang dipilih dengan teliti. Desain klasik yang elegan cocok untuk segala acara, dari casual hingga formal. Setiap berlian dipilih berdasarkan standar 4C (Cut, Color, Clarity, Carat) untuk memastikan kualitas terbaik.',
+                relatedCategory: 'cincin'
+            },
+            'cincin-tunangan-emas': {
+                name: 'Cincin Tunangan Emas',
+                category: 'Cincin',
+                price: 'Rp 5.000.000',
+                image: 'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=600&h=600&fit=crop',
+                description: 'Cincin tunangan emas 18k dengan berlian solitaire yang memukau. Desain yang sempurna untuk momen lamaran yang tak terlupakan. Berlian center stone dipilih dengan kualitas terbaik untuk memberikan kilau maksimal. Setting prong yang aman memastikan berlian terpasang dengan kokoh.',
+                relatedCategory: 'cincin'
+            },
+            'cincin-couple-minimalis': {
+                name: 'Cincin Couple Minimalis',
+                category: 'Cincin',
+                price: 'Rp 2.500.000',
+                image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=600&fit=crop',
+                description: 'Set cincin couple dengan desain minimalis modern yang cocok untuk pasangan muda. Dibuat dari emas 18K dengan finishing yang halus dan nyaman dipakai sehari-hari. Desain simpel namun elegan, melambangkan kesederhanaan dan keabadian cinta.',
+                relatedCategory: 'cincin'
+            },
+            'kalung-emas-liontin': {
+                name: 'Kalung Emas Liontin',
+                category: 'Kalung',
+                price: 'Rp 2.800.000',
+                image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop',
+                description: 'Kalung emas 18k dengan liontin elegan yang menawan. Desain liontin yang unik dan eye-catching, cocok untuk melengkapi penampilan Anda di berbagai acara. Rantai yang kuat namun tetap lembut di kulit, dengan panjang yang dapat disesuaikan.',
+                relatedCategory: 'kalung'
+            },
+            'kalung-berlian-mewah': {
+                name: 'Kalung Berlian Mewah',
+                category: 'Kalung',
+                price: 'Rp 8.500.000',
+                image: 'https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=600&h=600&fit=crop',
+                description: 'Kalung berlian dengan desain mewah dan eksklusif untuk tampilan yang glamor. Terdiri dari multiple berlian yang disusun dengan sempurna, menciptakan kilau yang memukau dari setiap sudut. Premium piece yang cocok untuk acara-acara istimewa.',
+                relatedCategory: 'kalung'
+            },
+            'kalung-mutiara-elegan': {
+                name: 'Kalung Mutiara Elegan',
+                category: 'Kalung',
+                price: 'Rp 3.200.000',
+                image: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&h=600&fit=crop',
+                description: 'Kalung mutiara asli dengan kualitas premium yang memancarkan keanggunan klasik. Mutiara dipilih dengan ukuran dan warna yang seragam, menciptakan tampilan yang harmonis. Cocok untuk acara formal dan memberikan kesan elegan dan sophisticated.',
+                relatedCategory: 'kalung'
+            },
+            'gelang-emas-minimalis': {
+                name: 'Gelang Emas Minimalis',
+                category: 'Gelang',
+                price: 'Rp 1.500.000',
+                image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=600&fit=crop',
+                description: 'Gelang emas dengan desain minimalis modern yang cocok untuk pemakaian sehari-hari. Ringan dan nyaman, dengan desain yang timeless. Dapat dipadukan dengan berbagai gaya outfit, dari casual hingga formal.',
+                relatedCategory: 'gelang'
+            },
+            'gelang-berlian-cantik': {
+                name: 'Gelang Berlian Cantik',
+                category: 'Gelang',
+                price: 'Rp 4.200.000',
+                image: 'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=600&h=600&fit=crop',
+                description: 'Gelang berlian dengan detail yang memukau dan craftsmanship yang superior. Setiap berlian dipasang dengan presisi tinggi untuk menciptakan gelang yang stunning. Setting yang aman memastikan berlian tidak mudah lepas.',
+                relatedCategory: 'gelang'
+            },
+            'gelang-bangle-emas': {
+                name: 'Gelang Bangle Emas',
+                category: 'Gelang',
+                price: 'Rp 2.100.000',
+                image: 'https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&h=600&fit=crop',
+                description: 'Gelang bangle emas dengan ukiran tradisional yang indah dan detail. Menggabungkan keindahan tradisional dengan kualitas modern. Ukiran yang halus dan presisi menunjukkan keahlian pengrajin kami.',
+                relatedCategory: 'gelang'
+            },
+            'anting-berlian-stud': {
+                name: 'Anting Berlian Stud',
+                category: 'Anting',
+                price: 'Rp 3.800.000',
+                image: 'https://images.unsplash.com/photo-1535556116002-6281ff3e9f42?w=600&h=600&fit=crop',
+                description: 'Anting berlian stud dengan kilau sempurna yang cocok untuk segala acara. Desain klasik yang never goes out of style. Berlian dipilih dengan kualitas terbaik untuk memberikan sparkle maksimal. Setting yang aman dan nyaman untuk pemakaian jangka panjang.',
+                relatedCategory: 'anting'
+            },
+            'anting-emas-drop': {
+                name: 'Anting Emas Drop',
+                category: 'Anting',
+                price: 'Rp 1.800.000',
+                image: 'https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=600&h=600&fit=crop',
+                description: 'Anting emas dengan desain drop yang anggun dan feminine. Gerakan yang lembut saat dipakai menambah daya tarik. Panjang yang pas untuk memberikan kesan elegan tanpa berlebihan.',
+                relatedCategory: 'anting'
+            },
+            'anting-mutiara-klasik': {
+                name: 'Anting Mutiara Klasik',
+                category: 'Anting',
+                price: 'Rp 2.200.000',
+                image: 'https://images.unsplash.com/photo-1589128777073-263566ae5e4d?w=600&h=600&fit=crop',
+                description: 'Anting mutiara dengan desain klasik yang elegan dan timeless. Mutiara berkualitas tinggi dengan luster yang indah. Cocok untuk berbagai acara, dari formal hingga semi-formal. Memberikan kesan sophisticated dan anggun.',
+                relatedCategory: 'anting'
+            }
+        };
+
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        if (productId && products[productId]) {
+            const product = products[productId];
+
+            // Update page content
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-category').textContent = product.category;
+            document.getElementById('product-price').textContent = product.price;
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-image').alt = product.name;
+            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('breadcrumb-product').textContent = product.name;
+            document.getElementById('hero-product-name').textContent = product.name;
+            document.title = product.name + ' - Dudung Jewelry';
+
+            // Update order button link
+            document.getElementById('order-button').href = `pemesanan.html?product=${encodeURIComponent(product.name)}`;
+
+            // Load related products
+            loadRelatedProducts(product.relatedCategory, productId);
+        } else {
+            // Redirect to products page if invalid ID
+            window.location.href = 'produk.html';
+        }
+
+        function loadRelatedProducts(category, currentProductId) {
+            const relatedContainer = document.getElementById('related-products');
+            let count = 0;
+
+            for (const [id, product] of Object.entries(products)) {
+                if (id !== currentProductId && product.relatedCategory === category && count < 3) {
+                    const productCard = `
+                        <div class="product-card" data-category="${product.relatedCategory}">
+                            <div class="product-image">
+                                <img src="${product.image}" alt="${product.name}">
+                            </div>
+                            <div class="product-info">
+                                <p class="product-category">${product.category}</p>
+                                <h3 class="product-name">${product.name}</h3>
+                                <p class="product-price">${product.price}</p>
+                                <a href="detail-produk.html?id=${id}" class="btn btn-primary" style="width: 100%;">Lihat Detail</a>
+                            </div>
+                        </div>
+                    `;
+                    relatedContainer.innerHTML += productCard;
+                    count++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
