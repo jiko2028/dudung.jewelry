@@ -97,12 +97,12 @@ function addMessage(message, isUser = false) {
 }
 
 const botResponses = {
-    'halo': 'Halo! Selamat datang di Dudung Jewelry. Ada yang bisa saya bantu?',
+    'halo': 'Halo! Selamat datang di ZXTYN JEWELRY. Ada yang bisa saya bantu?',
     'hai': 'Hai! Terima kasih telah menghubungi kami. Bagaimana saya bisa membantu Anda?',
     'produk': 'Kami menjual berbagai perhiasan seperti cincin, kalung, gelang, dan anting. Silakan kunjungi halaman Produk untuk melihat koleksi lengkap kami!',
     'harga': 'Harga produk kami bervariasi mulai dari Rp 1.500.000 hingga Rp 8.500.000. Silakan cek halaman Produk untuk detail lengkap.',
     'pesan': 'Untuk memesan, silakan isi formulir pemesanan di halaman Pemesanan atau hubungi kami langsung melalui WhatsApp.',
-    'kontak': 'Anda bisa menghubungi kami di:\n📞 +62 831-4185-8545\n📧 info@dudungjewelry.com',
+    'kontak': 'Anda bisa menghubungi kami di:\n📞 +62 831-4185-8545\n📧 info@zxtynjewelry.com',
     'jam': 'Kami buka Senin - Sabtu, pukul 09.00 - 18.00 WIB. Minggu dan hari libur tutup.',
     'default': 'Terima kasih atas pertanyaan Anda. Untuk informasi lebih detail, silakan hubungi kami di +62 831-4185-8545 atau kunjungi halaman Kontak.'
 };
@@ -143,7 +143,7 @@ function sendMessage() {
 
 if (chatMessages) {
     setTimeout(() => {
-        addMessage('Halo! Selamat datang di Dudung Jewelry. Ada yang bisa saya bantu hari ini? 😊', false);
+        addMessage('Halo! Selamat datang di ZXTYN JEWELRY. Ada yang bisa saya bantu hari ini? 😊', false);
     }, 1000);
 }
 
