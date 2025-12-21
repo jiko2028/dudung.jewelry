@@ -102,9 +102,9 @@ const botResponses = {
     'produk': 'Kami menjual berbagai perhiasan seperti cincin, kalung, gelang, dan anting. Silakan kunjungi halaman Produk untuk melihat koleksi lengkap kami!',
     'harga': 'Harga produk kami bervariasi mulai dari Rp 1.500.000 hingga Rp 8.500.000. Silakan cek halaman Produk untuk detail lengkap.',
     'pesan': 'Untuk memesan, silakan isi formulir pemesanan di halaman Pemesanan atau hubungi kami langsung melalui WhatsApp.',
-    'kontak': 'Anda bisa menghubungi kami di:\n📞 +62 812-3456-7890\n📧 info@dudungjewelry.com',
+    'kontak': 'Anda bisa menghubungi kami di:\n📞 +62 831-4185-8545\n📧 info@dudungjewelry.com',
     'jam': 'Kami buka Senin - Sabtu, pukul 09.00 - 18.00 WIB. Minggu dan hari libur tutup.',
-    'default': 'Terima kasih atas pertanyaan Anda. Untuk informasi lebih detail, silakan hubungi kami di +62 812-3456-7890 atau kunjungi halaman Kontak.'
+    'default': 'Terima kasih atas pertanyaan Anda. Untuk informasi lebih detail, silakan hubungi kami di +62 831-4185-8545 atau kunjungi halaman Kontak.'
 };
 
 function getBotResponse(userMessage) {
@@ -465,7 +465,7 @@ function showThankYouModal(orderData) {
                     Ada pertanyaan? Hubungi kami
                 </p>
                 <p style="color: #D4AF37; font-weight: 700; font-size: 1.15rem; margin: 0; letter-spacing: 0.3px;">
-                    📞 +62 812-3456-7890
+                    📞 +62 831-4185-8545
                 </p>
             </div>
             
